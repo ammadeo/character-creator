@@ -6,3 +6,12 @@
   text-align: center;
 }
 
+.footer a {
+  color: inherit;
+}
+
+@media (width <= 800px) {
+  .footer {
+    z-index: 10;
+  }
+}

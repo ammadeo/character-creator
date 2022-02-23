@@ -4,10 +4,13 @@
 }
 
 .maxWidthWrapper {
+  max-width: 1024px;
+  isolation: isolate;
 }
 
 .header {
   padding-bottom: 64px;
+  width: 65%;
 }
 
 .title {
@@ -24,7 +27,65 @@
 }
 
 .characterWrapper {
+  position: fixed;
+  top: 10vh;
+  right: 0;
+  min-height: 500px;
+  height: 80vh;
 }
 
 .controlColumn {
+  width: 50%;
+}
+
+.backdrop {
+  background: hsl(195deg, 20%, 86%);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 50%;
+}
+
+@media (width <= 800px) {
+  .backdrop {
+    top: 80%;
+  }
+
+  .header {
+    padding-block: 20px;
+    padding-inline: 10px;
+    margin-inline: -20px;
+
+    border: 2px solid hsl(180deg, 25%, 98%);
+    width: auto;
+    background: hsla(180deg, 25%, 92%, 0.9);
+    backdrop-filter: blur(10px);
+  }
+
+  .characterWrapper {
+    margin-inline: auto;
+    width: min-content;
+    height: 90vh;
+    z-index: 0;
+  }
+
+  .controlColumn {
+    position: fixed;
+    margin-block-end: -60px;
+    bottom: 60px;
+    left: 0;
+    right: 0;
+    display: flex;
+    gap: 8px;
+    padding-inline: 16px;
+    overflow: auto;
+    width: auto;
+  }
+
+  .maxWidthWrapper {
+    z-index: 2;
+    position: relative;
+    min-height: 140vh;
+  }
 }

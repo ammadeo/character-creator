@@ -1,2 +1,15 @@
 .buttonRow {
+  overflow: auto;
+  padding-block: 16px;
+  padding-inline: 24px;
+  margin-inline: -24px;
+  margin-block-end: -24px;
+  white-space: nowrap;
+}
+
+@media (width <= 800px) {
+  .buttonRow {
+    max-width: 85vw;
+    margin-block-end: -24px;
+  }
 }
